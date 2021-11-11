@@ -69,3 +69,46 @@ let products = [
 addToCart4(products);
 
 // 01:58:30 
+
+//... rest (Function sonuna saxlamaq lazım)
+function add(...numbers) {
+    let total = 0;
+    for(let i = 0; i < numbers.length; i++){
+        total = total + numbers[i];
+    }
+    console.log(total);
+}
+
+add(20,30,40,50);
+
+// spread massivi ayırar rest massivi toparlayar.
+let numbers = [30, 70, 20, 10, 800, 200]
+console.log(Math.max(...numbers))
+
+let [sherq, qerb, shimal,[sherqSheherleri, qerbSheherleri]] = [
+    {name: "Şərq", population:"4M"}, 
+    {name: "Qərb", population:"2M"}, 
+    {name: "Şimal", population:"1M"}, 
+     [
+        ["Bakı", "Sumqayıt"],
+        ["Tovuz", "Şəmkir"],
+        ["Zaqatala", "Qusar"],
+     ]
+         
+     
+];
+console.log(sherq.name);
+console.log(sherqSheherleri);
+console.log(qerbSheherleri);
+
+
+// Object yazanda bu syntax.
+let newProductName, newUnitPrice, newQuantity
+({productName:newProductName, unitPrice:newUnitPrice, quantity:newQuantity} 
+ = {productName:"Apple iPhone SE", unitPrice:1300, quantity:1});
+
+ console.log(newProductName);
+ console.log(newUnitPrice);
+ console.log(newQuantity);
+
+ // Camp Day 2
