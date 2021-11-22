@@ -11,6 +11,7 @@ let user2 = new User(2,"Apple","MacBook","Baku");
 
 userService.add(user1);
 userService.add(user2);
+user2.age = 19;
 console.log(userService.list());
 console.log(userService.getById(2));
 
@@ -19,3 +20,9 @@ let customer = { id: 1, firstName: "Shamo" };
 customer.lastName = "Naghiyev";
 
 console.log(customer.lastName);
+
+console.log(".................");
+userService.load();
+console.log(userService.customers);
+console.log(userService.employees);
+console.log(userService.errors)
